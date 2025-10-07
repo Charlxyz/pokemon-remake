@@ -60,3 +60,6 @@ class Soin:
     def heal(self, pokemon):
         pokemon.vie = min(pokemon.vie + self.soin_power, pokemon.pv_max)
         return f"--- {pokemon.nom} a été soigné | PV : {pokemon.vie}/{pokemon.pv_max} ---"
+
+    def __str__(self):
+        return f"{self.nom_soin}"
