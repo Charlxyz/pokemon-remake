@@ -1,5 +1,5 @@
 from random import random
-from faiblesses_types import faiblesses_simple, faiblesses_double
+from faiblesses_types import faiblesses_simple
 
 # Fonction pour définir la faiblesse de pokémon adverse et forcer l'attaque super efficace pour l'attaquant
 def Weakness(attaquant, defenseur):
@@ -35,32 +35,32 @@ def Weakness(attaquant, defenseur):
     if tres_efficace:
         # Choisir l'attaque très super efficace avec la plus grande puissance
         idx = max(tres_efficace, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 4, f"--- L'attaque : {attaquant.attaques[idx].nom} est très super efficace ! ---"
+        return idx, 4, f"[L'attaque : {attaquant.attaques[idx].nom} est très super efficace !]"
 
     elif super_efficace:
         # Choisir l'attaque super efficace avec la plus grande puissance
         idx = max(super_efficace, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 2, f"--- L'attaque : {attaquant.attaques[idx].nom} est super efficace ! ---"
+        return idx, 2, f"[L'attaque : {attaquant.attaques[idx].nom} est super efficace !]"
     
     elif classique_attaque:
         # Choisir l'attaque classique avec la plus grande puissance
         idx = max(classique_attaque, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 1, f"--- L'attaque : {attaquant.attaques[idx].nom} est normale ! ---"
+        return idx, 1, f"[L'attaque : {attaquant.attaques[idx].nom} est normale !]"
     
     elif resistant:
         # Choisir l'attaque résistante avec la plus grande puissance
         idx = max(resistant, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 0.5, f"--- L'attaque : {attaquant.attaques[idx].nom} est peu efficace ! ---"
+        return idx, 0.5, f"[L'attaque : {attaquant.attaques[idx].nom} est peu efficace !]"
     
     elif tres_resistant:
         # Choisir l'attaque très résistante avec la plus grande puissance
         idx = max(tres_resistant, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 0.25, f"--- L'attaque : {attaquant.attaques[idx].nom} est très peu efficace ! ---"
+        return idx, 0.25, f"[L'attaque : {attaquant.attaques[idx].nom} est très peu efficace !]"
     
     else:
         # Choisir l'attaque inefficace avec la plus grande puissance
         idx = max(ineficace, key=lambda i: attaquant.attaques[i].puissance)
-        return idx, 0, f"--- L'attaque : {attaquant.attaques[idx].nom} est inefficace ! ---"
+        return idx, 0, f"[L'attaque : {attaquant.attaques[idx].nom} est inefficace !]"
 
 def WeaknessDouble(type_attaque, type1, type2=None):
     """Retourne le multiplicateur de dégâts selon les types défensifs."""
