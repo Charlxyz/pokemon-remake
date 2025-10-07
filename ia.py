@@ -4,7 +4,7 @@ from faiblesses_types import faiblesses_simple, faiblesses_double
 # Fonction pour définir la faiblesse de pokémon adverse et forcer l'attaque super efficace pour l'attaquant
 def Weakness(attaquant, defenseur):
     """Détermine la faibnlesse du pokemon défenseur pour renvoyer l'attaque super efficace"""
-    index = -1
+    index = 0
     tres_efficace = []
     super_efficace = []
     classique_attaque = []
@@ -13,6 +13,8 @@ def Weakness(attaquant, defenseur):
     ineficace = []
     if '/' in defenseur.type:
         type1, type2 = defenseur.type.split('/')
+    else:
+        type1, type2 = defenseur.type, None
     for attaque in attaquant.attaques:
         resultat = WeaknessDouble(attaque.type, type1, type2)
 
