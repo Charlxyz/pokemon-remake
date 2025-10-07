@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Combat Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<body>
+    <div class="combat-container">
+        <!-- Zone centrale -->
+        <div class="battlefield">
+            <!-- Combat à gauche -->
+            <div class="arena">
+                <div class="platform enemy"></div>
+                <div class="platform player"></div>
+
+                <!-- Statut adversaire -->
+                <div class="status-bar enemy">
+                <div class="pokeballs">
+                    <span></span><span></span><span></span><span></span><span class="active"></span>
+            </div>
+        </div>
+
+        <!-- Statut joueur -->
+        <div class="status-bar player">
+          <div class="pokeballs">
+            <span></span><span></span><span class="active"></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logs à droite -->
+      <div class="log-zone">
+        <h3>Logs</h3>
+        <p>[Tour 1] Pikachu utilise Tonnerre !</p>
+        <p>[Tour 1] Bulbizarre perd 20 PV.</p>
+        <p>[Tour 2] Bulbizarre utilise Tranch’Herbe !</p>
+      </div>
+    </div>
+
+    <!-- Texte/boutons en bas -->
+    <div class="text-box">
+      Que doit faire Pikachu ?
+    </div>
+  </div>
+</body>
+</html>
