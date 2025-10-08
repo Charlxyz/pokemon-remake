@@ -10,7 +10,7 @@ def CalculDegats(attaquant, defenseur, attaque, multiplicateur: float) -> int:
 
     stab = 1.2 if attaquant.type == attaque.type else 1
 
-    if random.random() < 0.1:  # 10 % de chance de critique
+    if random.random() < 0.08:  # 8 % de chance de critique
         critique = 1.5
         message = "[Coup Critique !]"
     else:
